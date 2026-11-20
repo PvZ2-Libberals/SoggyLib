@@ -1,6 +1,7 @@
 @echo off
 setlocal enableextensions enabledelayedexpansion
 
+:: Change ndk path to yours
 set "NDK_PATH=C:/Android/ndk"
 set "ABI=arm64-v8a"
 set "MIN_SDK=24"
