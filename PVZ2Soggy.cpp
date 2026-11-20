@@ -77,8 +77,12 @@ static uintptr_t g_hiddenCB = 0;
 static constexpr uint32_t kId = 30;
 
 static long hkBoardLayout(uintptr_t b) {
+    bool high = getHighView();
+    if (high) {
+        *(float*)(b + BOARD_280) = 1.0f;
+    }
     long r = oBoardLayout(b);
-    if (getHighView()) {
+    if (high) {
         int a = *(int*)(b + BOARD_283), c = *(int*)(b + BOARD_286);
         *(int*)(b + BOARD_270) = -a;
         *(int*)(b + BOARD_284) = -a;
@@ -86,6 +90,7 @@ static long hkBoardLayout(uintptr_t b) {
     }
     return r;
 }
+
 static long hkBoardZoom(uintptr_t b) {
     long r = oBoardZoom(b);
     if (getHighView()) *(float*)(b + BOARD_280) = 1.0f;
