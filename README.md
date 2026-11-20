@@ -1,9 +1,9 @@
 # Soggylib
 
-A shared library for **Plants vs. Zombies 2** modding. (64-bit ONLY!!!!!)
+A shared library for **Plants vs. Zombies 2** modding and library template. (64-bit ONLY!!!!!)
 Yes, another one. No, this one's actually good.
 
-This library required SnowieLib (Use for spawning zombies for sandbox mode) some some offsets might changes, so make sure to install slib :)
+This library required [SnowieLib](https://docs.google.com/document/d/19QHfOEH8m9cn9DTCF7gGqe-M2IGAHYiUU4wgd0guKf8/edit?tab=t.0#heading=h.7ifa0oiaoxmt) Because some offsets might changes, so make sure to install slib :)
 
 ---
 
@@ -27,15 +27,10 @@ Got a different version? Cool. Update `offsets.h` yourself. good luck
 
 ---
 
-## IMPORTANT!!!!
-As of v1.0.5 Soggylib require you to install specific files in your obb (no it's not logger) to make features working properly
-See [Installations/README.md](Installations/README.md) for more informations.
-
----
-
 # Usage
+You need to have [Snowie's lib](https://docs.google.com/document/d/19QHfOEH8m9cn9DTCF7gGqe-M2IGAHYiUU4wgd0guKf8/edit?tab=t.0#heading=h.7ifa0oiaoxmt) installed first
 
-1. Yeet `libSoggy.so` into your APK's `lib/arm64-v8a/` folder (make sure to delete armeabi-v7a)
+1. Yeet `libSoggy.so` into your APK's `lib/arm64-v8a/` folder
 2. Paste this code in `smali_classes2\com\popcap\PvZ2\PvZ2GameActivity`
    ```
    const-string v0, "Soggy"
@@ -109,8 +104,7 @@ adb logcat -s Soggy:* crash_dump:* > soggy.log
 
 ## Sandbox
 
-- [ ] Auto load Resource group
-- [ ] Shovel everything
+- [ ] Preparing source code
 
 ---
 
@@ -121,6 +115,7 @@ adb logcat -s Soggy:* crash_dump:* > soggy.log
 - **[Plants vs Zombie discord (not offical one)](https://discord.gg/pvz)** - Awesome community
 - **[Original Full lawn tab](https://github.com/CongJian833/PvZ2-LawnZoomTab)** - Original repo for full lawn from 9.8.1 [video](https://www.bilibili.com/video/BV1iNbX6DEy7/)
 - **[Renojackson's Awesome lib](https://github.com/RenoJson/ARM64_example_injection_for_PvZ2/)** - Bunches of cool stuff for ARM64 lib
+- [**Snowie'slib**](https://docs.google.com/document/d/19QHfOEH8m9cn9DTCF7gGqe-M2IGAHYiUU4wgd0guKf8/edit?tab=t.0#heading=h.7ifa0oiaoxmt) - Because Slib's libPvZ2 changed, you'll need this
 
 ---
 
@@ -133,5 +128,5 @@ PvZ2 belongs to PopCap / EA. Not affiliated, not endorsed, not sued (yet).
 
 ---
 
-# My mod
+# Side project
 Hey glad you made it this far, I guess wanna say that I'm currently working on **PvZ2 Soggy** which include **everything** in this lib (obviously) and bunch of cool contents, If you interested on being tester, feel free to send me a DM (aasu_rel). farewell modders.
